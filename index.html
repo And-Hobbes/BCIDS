@@ -7,6 +7,7 @@
 <script src="https://unpkg.com/jquery.terminal@2.x.x/js/jquery.terminal.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
 
+<script src="content.js"></script>
 <script>
 	jQuery(function($) {
 		const introart = String.raw`      ___           ___                       ___           ___     
@@ -21,22 +22,47 @@
     \::/__/       \:\__\       \/__/        \::/__/       \::/  /   
      ~~            \/__/                     ~~            \/__/    `;
 
-			$('body').terminal(function(command) {
-					if( command === 'exit'){
+			$('body').terminal(async function(command) {
+					const parts = command.split(' ');
+					const cmd = parts[0];
+					const args = parts.slice(1);
+					
+					if(cmd === 'exit'){
 						window.close()
 					}
-					else if( command === 'reload'){
+					else if(cmd === 'reload'){
 						window.location.reload();
 					}
-					else if(command === 'open'){
-						alert("creditials incorrect")	
+					else if(cmd === 'open'){
+						if(FILES[args[0]]){
+							this.echo(FILES[args[0]]);
+						}
+						else {
+							this.error(`open error: provide valid file`);
+						}
+					}
+					else if(cmd === 'boot'){
+						this.clear();
+						await this.echo('Initializing...', {typing: true, delay: 60});
+						await this.echo('Accessing Bootloader...', {typing: true, delay: 40});
+						await this.echo('Reserving Database connection...', {typing: true, delay: 70});
+						await this.echo('READY');
+						await new Promise(r => setTimeout(r, 4000));
+						this.clear()
+						await this.echo(introart + '\n Property of BrundleCorp Internal Database Systems Department \n [Type: commands]', {typing: true, delay: 10});
+		
+					}
+					else if(cmd === 'commands'){
+						this.echo(" ls: list available files\n exit: close tab\n reload: reload tab\n open + NAME: open file selected by NAME\n");
+					}
+					else if(cmd === 'ls'){
+						this.echo(Object.keys(FILES).join('\n'));
 					}
 					else {
-				this.echo("You typed: " + command);
+				this.echo("You typed: " + cmd + " which was not recognized");
 					}
 			}, {
-				greetings: introart + "\n Property of BrundleCorp Internal Database Systems Department"
-			});
+				greetings: "System Requires Booting (type boot)"	});
 		});
 </script>
 </head>
