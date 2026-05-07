@@ -45,7 +45,9 @@
 										await this.echo(subLine,{typing: true, delay: 20});
 									}
 								}
-								await this.read('');
+								 this.pause();
+								 await new Promise(resolve => $(document).one('keydown', resolve));
+								 this.resume();
 							}
 							
 						}
