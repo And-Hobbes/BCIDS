@@ -23,7 +23,7 @@
      ~~            \/__/                     ~~            \/__/    `;
 
 			$('body').terminal(async function(command) {
-					const parts = command.split(' ');
+					const parts = command.split('---');
 					const cmd = parts[0];
 					const args = parts.slice(1);
 					
@@ -35,7 +35,12 @@
 					}
 					else if(cmd === 'open'){
 						if(FILES[args[0]]){
-							this.echo(FILES[args[0]]);
+							const lines = FILES[args[0]].split('something');
+							for(const line of lines){
+								this.echo(line,{typing: true, delay: 20});
+								await this.read('');
+							}
+							
 						}
 						else {
 							this.error(`open error: provide valid file`);
