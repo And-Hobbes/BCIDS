@@ -36,8 +36,10 @@
 					else if(cmd === 'open'){
 						if(FILES[args[0]]){
 							const lines = FILES[args[0]].split('---');
-							for(const line of lines){
-								await this.echo(line,{typing: true, delay: 20});
+							for(const chunk of lines){
+								for(const subLine of chunk.split('\n')){
+									await this.echo(line,{typing: true, delay: 20});
+								}
 								await this.read('');
 							}
 							
