@@ -23,7 +23,7 @@
      ~~            \/__/                     ~~            \/__/    `;
 
 			$('body').terminal(async function(command) {
-					const parts = command.split('---');
+					const parts = command.split(' ');
 					const cmd = parts[0];
 					const args = parts.slice(1);
 					
