@@ -38,11 +38,11 @@
 							const lines = FILES[args[0]].split('---');
 							for(const chunk of lines){
 								for(const subLine of chunk.split('\n')){
+									outputSpeed = Math.floor(Math.random()*50)
 									if (subLine.length === 0){
 										this.echo('');
 									}
 									else{
-										outputSpeed = Math.floor(Math.random()*40)
 										await this.echo(subLine,{typing: true, delay: outputSpeed});
 									}
 								}
