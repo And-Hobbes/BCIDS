@@ -38,7 +38,7 @@
 							const lines = FILES[args[0]].split('---');
 							for(const chunk of lines){
 								for(const subLine of chunk.split('\n')){
-									await this.echo(line,{typing: true, delay: 20});
+									await this.echo(subLine,{typing: true, delay: 20});
 								}
 								await this.read('');
 							}
