@@ -42,7 +42,8 @@
 										this.echo('');
 									}
 									else{
-										await this.echo(subLine,{typing: true, delay: 20});
+										outputSpeed = Math.floor(Math.random()*40)
+										await this.echo(subLine,{typing: true, delay: outputSpeed});
 									}
 								}
 								 this.pause();
