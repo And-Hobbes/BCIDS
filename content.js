@@ -72,7 +72,13 @@ const FILES = {
 
 	Celebrity Endorsement:
 	---
-	
+	Intellectualisms decline in mondial popularity presents a near insurmountable challenge in selection of consumer-sided face selection. As such we believe releasing more digestible copies of the following to be best:	
+	Acquiring a literate celebity presents considerable challenge in the modern age, instead we believe that we should present a line of simplified novels to demonstrate their efficacy. Our reading list is as follows:
+	People don't read, as such there are no celebrities for this. We instead will bring the classics back to the masses, removing anything unsavory or nuanced for maximum digestibility while maintaining prestige through historic names such as:
+	---
+	^^^
+	Fahrenheit 451 - Frankenstein - Ubik
+	^^^
 	---
 	   !__!
 	  (@)(-)
@@ -87,9 +93,15 @@ const FILES = {
 	Version 18.1.17
 
 	Project - ArtificialMnemonicIntegrator® 
-	
+	---
+	The Artificial MNemonic Integrator® expands on our earlier product, the CVTS, by instead of simplifying, generating connections to existing topics withing the users existing knowledge base and preferences.
+	---
+	^^^
+	VERY LONG LLM TEXT HERE
+	^^^
 	---
 	Competition Report: 
+	
 
 	---
 	Product RoadMap:
