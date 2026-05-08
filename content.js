@@ -47,8 +47,11 @@ const FILES = {
 	... `,
 		//
 	'CVTS.txt' : `BrundleCorp™ Internal Database Document:	b12-ce19
-	Version 8.7.14 - Bill M. Kahlhamer
-
+	~~~
+	Version 8.7.14 - William Michael Kahlhamer
+	Version 8.7 - Bill M. Kahlhamer
+	Version 8 - B.M.K
+	---
 	Project - ContextualVisualandTextualSimplifier® 
 	---
 	The Contextual Visual and Textual Simplifier® |CVTS from here on| acts as a neurological annexation system allowing visual input to be interpreted and translated into user-specific Knowledge-Bytes™ before beamforming the data into the deep cerebral cortex.
@@ -56,21 +59,26 @@ const FILES = {
 	The CVTS shows the user the most palatable version of the real world for each user.
 	---
 	Competition Report: 
+	~~~
+
 	Wilcer, Incorporated™'s Empathy Box® demonstrates the interconnective matrix ideology paramount to the function of the CVTS with a massive network of subjects, however the preliminary goal of the Empathy Box® is shared empathy under the Mercerism religious doctrine. Whereas the CVTS aims to enable each individual to experience the world in their most pleasant perspective.
 	W Inc™'s Empathy Box® has the same underlying function as the CVTS, but the religious affiliation leaves the constant pleasure perspective market available.
 	The Empathy Box connects people for empathy, the CVTS is similar but modifies reality to maximize the agreeableness of reality, if this aligns with others and the world good, if not so be it.
 	---
 	Product RoadMap:
+	~~~
 	Human implementation trials were conducted in the Ingolstadt facility, subjects demonstrated adequate functioning and were extremely productive workers, while at the same time believed they were truly in heaven attaining their deepest desires.
 	Human trials were held in the Ingolstadt research center, users were able to continue working well and extremely content with their new world-view
 	Human trials were held. Workers became more productive as they left the confines of our rigid reality.
 	---
 	Marketing and Implementation Strategy:
+	~~~
 	CVTS can be sold as a "second brain" tool much like the ancient large language models systems of the past. The promise of increased productivity and clearer understanding of the world will attract users and capital alike. The CVTS can be sold in a bundle with our highly successful AAIS system to further augment perspective modifying system deals.
 	CVTS should sell the promise of better productivity with more enjoyment. Product is highly desirable to workers and corporations for its benefits. Product fits well in our existing product lineup.
 	Product detaches the worker from the work, sell to the worker a constant vacation, and to companies constant high quality workers.
 
 	Celebrity Endorsement:
+	~~~
 	---
 	Intellectualisms decline in mondial popularity presents a near insurmountable challenge in selection of consumer-sided face selection. As such we believe releasing more digestible copies of the following to be best:	
 	Acquiring a literate celebity presents considerable challenge in the modern age, instead we believe that we should present a line of simplified novels to demonstrate their efficacy. Our reading list is as follows:
@@ -81,10 +89,15 @@ const FILES = {
 	^^^
 	---
 	   !__!
+	   ~~~
 	  (@)(-)
+	  ~~~
 	 \\.'||'./
+	 ~~~
 	-:  ::  :-
+	~~~
 	/'..''..'\\
+	~~~ 
 		
 
 	... `,

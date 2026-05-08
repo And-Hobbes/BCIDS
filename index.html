@@ -44,6 +44,7 @@
 						if(FILES[args[0]]){
 							const lines = FILES[args[0]].split('---');
 							const isAAIS = args[0] === 'AAIS.txt';
+							const isCVTS = args[0] === 'CVTS.txt';
 							const a1 = document.getElementById('audio1');
 							const a2 = document.getElementById('audio2');
 							if(isAAIS){
@@ -51,25 +52,78 @@
 								a1.currentTime = 0; a2.currentTime = 0;
 								a1.play(); a2.play();
 							}
-							// a line containing just ^^^ toggles highlight mode 
+							// a line containing just ^^^ toggles highlight mode
 							let highlight = false;
 							const HIGHLIGHT_COLOR = '#ff5555'; // change to recolor
+							const wrap = (s, hi) => hi ? `[[;${HIGHLIGHT_COLOR};]${s}]` : s;
+							const waitForKey = async () => {
+								this.pause();
+								await new Promise(r => $(document).one('keydown', r));
+								this.set_command('');
+								this.resume();
+							};
 							for(let i = 0; i < lines.length; i++){
 								const chunk = lines[i];
+
+								// --- CVTS-only behaviour --------------------------------------
+								// Within a single '---' chunk, show ONE line at a time.
+								// Each keystroke types the next line. Variant lines erase
+								// (reverse-typed) before the next types in; sticky lines persist.
+								//
+								// Markers (per chunk):
+								//   '~~~'  splits sticky header (above) from variants (below).
+								//          If absent, all lines are treated as variants.
+								//   '^^^'  toggles highlight (works in either section).
+								//
+								// Sticky lines: type, wait, advance — never erase.
+								// Variant lines: type, wait, erase (unless it's the last variant,
+								//                which stays on screen as the "chosen" version).
+								if(isCVTS){
+									const items = [];
+									let inVariants = false;
+									for(const s of chunk.split('\n')){
+										if(s.trim() === '~~~'){ inVariants = true; continue; }
+										if(s.trim() === '^^^'){ highlight = !highlight; continue; }
+										if(s.trim().length === 0) continue;
+										items.push({text: s, hi: highlight, variant: inVariants});
+									}
+									// no '~~~' in this chunk → preserve old behaviour: all variants
+									if(!items.some(it => it.variant)){
+										for(const it of items) it.variant = true;
+									}
+									for(let j = 0; j < items.length; j++){
+										const {text, hi, variant} = items[j];
+										const speed = Math.floor(Math.random()*30);
+										// type the line in
+										await this.echo(wrap(text, hi), {typing: true, delay: speed});
+										// wait for the user to press a key
+										await waitForKey();
+										// erase only if this is a variant AND another variant follows
+										const next = items[j + 1];
+										if(variant && next && next.variant){
+											const idx = this.last_index();
+											for(let k = text.length - 1; k >= 0; k--){
+												this.update(idx, wrap(text.substring(0, k), hi));
+												await new Promise(r => setTimeout(r, speed));
+											}
+											this.remove_line(idx);
+										}
+									}
+									continue; // next chunk
+								}
+								// --- end CVTS branch ------------------------------------------
+
 								for(const subLine of chunk.split('\n')){
 									if(subLine.trim() === '^^^'){
 										highlight = !highlight;
 										continue;
 									}
-									outputSpeed = Math.floor(Math.random()*50)
+									outputSpeed = Math.floor(Math.random()*30)
 									if (subLine.length === 0){
 										this.echo('');
 									}
-									else if(highlight){
-										await this.echo(`[[;${HIGHLIGHT_COLOR};]${subLine}]`, {typing: true, delay: outputSpeed});
-									}
-									else{
-										await this.echo(subLine,{typing: true, delay: outputSpeed});
+									else {
+										await this.echo(wrap(subLine, highlight), {typing: true, delay: outputSpeed});
 									}
 								}
 								if(isAAIS && lines.length > 1){
@@ -84,10 +138,7 @@
 									a1.volume = Math.cos(fade * Math.PI / 2);
 									a2.volume = Math.sin(fade * Math.PI / 2);
 								}
-								 this.pause();
-								 await new Promise(resolve => $(document).one('keydown', resolve));
-								 this.set_command('');
-								 this.resume();
+								await waitForKey();
 							}
 							if(isAAIS){ a1.pause(); a2.pause(); }
 						}
