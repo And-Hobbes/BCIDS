@@ -68,9 +68,9 @@ const FILES = {
 	
 	Product RoadMap:
 	~~~
-	Human implementation trials were conducted in the Ingolstadt facility, subjects demonstrated adequate functioning and were extremely productive workers, while at the same time believed they were truly in heaven attaining their deepest desires.
-	Human trials were held in the Ingolstadt research center, users were able to continue working well and extremely content with their new world-view
-	Human trials were held. Workers became more productive as they left the confines of our rigid reality.
+	Human implementation trials were conducted in the Ingolstadt facility, subjects demonstrated adequate functioning and were extremely productive workers, while at the same time believed they were physically in a place that does not exist attaining their deepest desires.
+	Human trials were held in the Ingolstadt research center, users were able to continue working incredibly efficiently and were extremely content with their new permuted heterotropic world.
+	Human trials were held. Workers became more productive as they were placed into artifical non-places.
 	---
 	
 	Marketing and Implementation Strategy:
@@ -103,21 +103,38 @@ const FILES = {
 	The Artificial MNemonic Integrator® expands on our earlier product, the CVTS, by instead of simplifying, generating connections to existing topics withing the users existing knowledge base and preferences.
 	---
 	^^^
-	VERY LONG LLM TEXT HERE
+	LLM replace this line with a large paragraph, starting somewhat related to the sentence above as if to explain, but quickly devolve into recursive metaphors making the explaination indecipherable, or at the very least very obtuse
 	^^^
 	---
 	Competition Report: 
-	
-	
+	Even more reminiscent of the long obsolete large language model or at the time incorrectly referred to as
+	^^^
+	|Artificially Intelligent|
+	^^^
+	This incorrect label is clear when refered to the NEXUS line developped by the Rosen Association™. Currently there exists no competitor in the field of generative intelligence adaptive learning.
+	^^^
+	LLM replace this line with a large paragraph, starting somewhat related to the sentence above as if to explain, but quickly devolve into recursive metaphors making the explaination indecipherable, or at the very least very obtuse. 
+	^^^
 
 	---
 	Product RoadMap:
+	The AMI, as tested in the Antarctic American Research Station in a joint effort with the Alva Enterprise™, succeeded in developping heterotopia with simulated personal connection by mergering the knowledge base of LLM's with the nexus-6 personality framework.
+	This remedies the earlier failures of the CVTS, which, after extended use caused recipients to develop.
+	^^^
+	Schizophrenia
+	Solipsism
+	Delusions of Godhood
 	
+	LLM replace this line with a large paragraph, starting somewhat related to the sentence above as if to explain, but quickly devolve into recursive metaphors making the explaination indecipherable, or at the very least very obtuse. Furthermore, for this one include some identity signaling language, such as I and you as if you were a person and the reader was the recipient of the AMI and you are the LLM-Nexus Hybrid.
+	^^^
+	*Current long term affects of the AMI are unknown but the addition of personality is 99% likely to remove any chance of the earlier failures*
 	---
 	Marketing and Implementation Strategy:
 
 	Celebrity Endorsement:
 	---
+	We recommend John Isidore as the face for this product improvement. Given his cognitive level, minimial capital will be required to acquire is agreement. 
+	Furthermore, his fame after the Nexus-6 distinguishment incident, and his adoption |and subsequent public deterioration via the aforementioned issues| highlight the growth and reputability of our new product.
 
 	---
 	   !__!
