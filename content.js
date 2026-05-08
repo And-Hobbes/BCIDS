@@ -15,20 +15,25 @@ const FILES = {
 	---
 	Product RoadMap:
 	Human Trials at the Freeside research laboratory have demonstrated general success* with rare [but substantial] side effects.
-	Product is ready for general release, the 0.5% of patients that experience extreme side effects [Priapism, Loss of Smell, Onset of OCD] cannot be easily identified as resulting from the AAIS
+	Product is ready for general release, the 0.5% of patients that 
+	^^^ 
+	experience extreme side effects | Priapism, Loss of Smell, Onset of OCD | cannot be easily identified as resulting from the AAIS 
+	^^^
 	Future development could include the sale of information of prefered noises or location dependent audio to enterprises to help entice users to purchase goods or services.
 
 	---
 	Marketing and Implementation Strategy:
-
+	
+	^^^
 	DO NOT EXPOSE OR ADVERTISE COMPLETE AUDITORY SEPARATION FUNCTION.
+	^^^
 	Instead only highlight the augmentation of real noise.
 	Advertising campaign demonstrating the connection to reality reacquired compared to the Mood-Organ®.
 
 	Celebrity Endorsement:
 	---
 	We recommend the BrundleCorp™ acquire the digital likeness of "Mr.Damon" and "Ms.Williams"
-	These individuals propensity for perfidy of their supporters for ensure capital is well used.
+	These individuals propensity for perfidy of their supporters ensures capital is well used.
 	Moreover, their recognition with film and health will support the idea of the augmentation of quality of life via the AAIS.
 
 	---
@@ -40,25 +45,86 @@ const FILES = {
 		
 	
 	... `,
+		//
 	'CVTS.txt' : `BrundleCorp™ Internal Database Document:	b12-ce19
 	Version 8.7.14
 
 	Project - ContextualVisualandTextualSimplifier® 
+	
+	---
+	Competition Report:
+
+	---
+	Product RoadMap:
+	
+	---
+	Marketing and Implementation Strategy:
+
+	Celebrity Endorsement:
+	---
+
+	---
+	   !__!
+	  (@)(-)
+	 \\.'||'./
+	-:  ::  :-
+	/'..''..'\\
+		
 
 	... `,
-
+		// Current day LLM related
 	'AMI.txt' : `BrundleCorp™ Internal Database Document:	+3-18Ufor
 	Version 18.1.17
 
 	Project - ArtificialMnemonicIntegrator® 
+	
+	---
+	Competition Report:
 
+	---
+	Product RoadMap:
+	
+	---
+	Marketing and Implementation Strategy:
+
+	Celebrity Endorsement:
+	---
+
+	---
+	   !__!
+	  (@)(-)
+	 \\.'||'./
+	-:  ::  :-
+	/'..''..'\\
+		
 
 	...`,
-
+		// Neuromancer/Matrix Connection
 		'OpusPromethean.txt' : `BrundleCorp™ Internal Database Document: ██ ██ ██ ██ -4	
 	Version 1.1.██ █ 
 
 	Project - Opus Prometheam® 
+		
+	---
+	Competition Report:
+
+	---
+	Product RoadMap:
+	
+	---
+	Marketing and Implementation Strategy:
+
+	Celebrity Endorsement:
+	---
+
+	---
+	   !__!
+	  (@)(-)
+	 \\.'||'./
+	-:  ::  :-
+	/'..''..'\\
+		
+
 
 	...`
 };

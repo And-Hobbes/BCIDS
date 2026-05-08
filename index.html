@@ -44,21 +44,39 @@
 								a1.currentTime = 0; a2.currentTime = 0;
 								a1.play(); a2.play();
 							}
+							// a line containing only ^^^ toggles highlight mode on/off.
+							// lines printed while highlight is on are colored. the ^^^ marker itself is not printed.
+							let highlight = false;
+							const HIGHLIGHT_COLOR = '#ff5555'; // change this to recolor highlighted lines
 							for(let i = 0; i < lines.length; i++){
 								const chunk = lines[i];
 								for(const subLine of chunk.split('\n')){
+									if(subLine.trim() === '^^^'){
+										highlight = !highlight;
+										continue;
+									}
 									outputSpeed = Math.floor(Math.random()*50)
 									if (subLine.length === 0){
 										this.echo('');
+									}
+									else if(highlight){
+										await this.echo(`[[;${HIGHLIGHT_COLOR};]${subLine}]`, {typing: true, delay: outputSpeed});
 									}
 									else{
 										await this.echo(subLine,{typing: true, delay: outputSpeed});
 									}
 								}
 								if(isAAIS && lines.length > 1){
+									// progress through the file: 0 at the first chunk, 1 at the last
 									const p = i / (lines.length - 1);
-									a1.volume = 1 - p;
-									a2.volume = p;
+									// crossfade only happens between fadeStart and fadeEnd.
+									// before fadeStart: audio1 alone. after fadeEnd: audio2 alone.
+									const fadeStart = 0.4;
+									const fadeEnd   = 0.6;
+									const fade = Math.min(1, Math.max(0, (p - fadeStart) / (fadeEnd - fadeStart)));
+									// equal-power curve: keeps combined loudness roughly flat through the fade
+									a1.volume = Math.cos(fade * Math.PI / 2);
+									a2.volume = Math.sin(fade * Math.PI / 2);
 								}
 								 this.pause();
 								 await new Promise(resolve => $(document).one('keydown', resolve));
