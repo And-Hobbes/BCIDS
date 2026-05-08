@@ -34,6 +34,13 @@
 						window.location.reload();
 					}
 					else if(cmd === 'open'){
+						
+						this.echo('[press any key after sentence is written to continue]');
+						this.pause();
+						await new Promise(resolve => $(document).one('keydown', resolve));
+						this.set_command('');
+						this.resume();
+
 						if(FILES[args[0]]){
 							const lines = FILES[args[0]].split('---');
 							const isAAIS = args[0] === 'AAIS.txt';
@@ -44,10 +51,9 @@
 								a1.currentTime = 0; a2.currentTime = 0;
 								a1.play(); a2.play();
 							}
-							// a line containing only ^^^ toggles highlight mode on/off.
-							// lines printed while highlight is on are colored. the ^^^ marker itself is not printed.
+							// a line containing just ^^^ toggles highlight mode 
 							let highlight = false;
-							const HIGHLIGHT_COLOR = '#ff5555'; // change this to recolor highlighted lines
+							const HIGHLIGHT_COLOR = '#ff5555'; // change to recolor
 							for(let i = 0; i < lines.length; i++){
 								const chunk = lines[i];
 								for(const subLine of chunk.split('\n')){
@@ -95,16 +101,16 @@
 						await this.echo('Accessing Bootloader...', {typing: true, delay: 40});
 						await this.echo('Reserving Database connection...', {typing: true, delay: 70});
 						await this.echo('READY');
-						await new Promise(r => setTimeout(r, 3000));
+						await new Promise(r => setTimeout(r, 2000));
 						this.clear()
-						await this.echo(introart + '\n Property of BrundleCorp Internal Database Systems Department \n [Type: commands]', {typing: true, delay: 10});
+						await this.echo(introart + '\n Property of BrundleCorp Internal Database Systems Department \n [Type: commands]', {typing: true, delay: 5});
 		
 					}
 					else if(cmd === 'commands'){
-						this.echo(" ls: list available files\n exit: close tab\n reload: reload tab\n open + NAME: open file selected by NAME\n");
+						this.echo(" [[b;yellow;]ls]: list files that can be opened with open command\n [[b;yellow;]open + NAME]: open file selected by NAME [example: open AAIS.txt]\n"); // exit: close tab\n reload: reload tab\n 
 					}
 					else if(cmd === 'ls'){
-						this.echo(Object.keys(FILES).join('\n'));
+						this.echo(Object.keys(FILES).map(f=>`[[;green;]${f}]`).join('\n'));
 					}
 					else {
 				this.echo("You typed: " + cmd + " which was not recognized");
