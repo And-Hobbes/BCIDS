@@ -6,7 +6,6 @@ const FILES = {
 	---
 	The Auditary Augmentation Integrated System® is a auditory bypass implant placed between the tympanic membrane and the temporal lobe.\n\tVia this implant modulations to real inputs are possible, as well as the construction of fabricated noise within the recipients conciousness.\n\tFurthermore, free floating dopamine probes allow for the collection and analysis of prefered auditary stimulation, thus allowing maximum enjoyment of audio in all scenarios, by augment or obfuscation.
 
-	
 	---
 	Competition Report:
 	\n\tThe Penfield™ Mood-Organ® represents a large portion of market share in the limited abstraction emotion regulation market. Penfield™'s consumer base feels increasingly alienated from the present as a result artificial emotion regulation.
@@ -52,6 +51,7 @@ const FILES = {
 	Version 8.7 - Bill M. Kahlhamer
 	Version 8 - B.M.K
 	---
+
 	Project - ContextualVisualandTextualSimplifier® 
 	---
 	The Contextual Visual and Textual Simplifier® |CVTS from here on| acts as a neurological annexation system allowing visual input to be interpreted and translated into user-specific Knowledge-Bytes™ before beamforming the data into the deep cerebral cortex.
@@ -65,42 +65,35 @@ const FILES = {
 	W Inc™'s Empathy Box® has the same underlying function as the CVTS, but the religious affiliation leaves the constant pleasure perspective market available.
 	The Empathy Box connects people for empathy, the CVTS is similar but modifies reality to maximize the agreeableness of reality, if this aligns with others and the world good, if not so be it.
 	---
+	
 	Product RoadMap:
 	~~~
 	Human implementation trials were conducted in the Ingolstadt facility, subjects demonstrated adequate functioning and were extremely productive workers, while at the same time believed they were truly in heaven attaining their deepest desires.
 	Human trials were held in the Ingolstadt research center, users were able to continue working well and extremely content with their new world-view
 	Human trials were held. Workers became more productive as they left the confines of our rigid reality.
 	---
+	
 	Marketing and Implementation Strategy:
 	~~~
 	CVTS can be sold as a "second brain" tool much like the ancient large language models systems of the past. The promise of increased productivity and clearer understanding of the world will attract users and capital alike. The CVTS can be sold in a bundle with our highly successful AAIS system to further augment perspective modifying system deals.
 	CVTS should sell the promise of better productivity with more enjoyment. Product is highly desirable to workers and corporations for its benefits. Product fits well in our existing product lineup.
-	Product detaches the worker from the work, sell to the worker a constant vacation, and to companies constant high quality workers.
+	Product detaches the worker from the work, sell to the worker the idea of constant vacation, and to the company driven, high quality, perfect workers.
+
 
 	Celebrity Endorsement:
 	~~~
 	---
 	Intellectualisms decline in mondial popularity presents a near insurmountable challenge in selection of consumer-sided face selection. As such we believe releasing more digestible copies of the following to be best:	
 	Acquiring a literate celebity presents considerable challenge in the modern age, instead we believe that we should present a line of simplified novels to demonstrate their efficacy. Our reading list is as follows:
-	People don't read, as such there are no celebrities for this. We instead will bring the classics back to the masses, removing anything unsavory or nuanced for maximum digestibility while maintaining prestige through historic names such as:
+	People don't read, as such there are no celebrities for this. We instead propose bring the classics back to the masses, removing anything unsavory or nuanced for maximum digestibility while maintaining prestige through historic names such as:
 	---
 	^^^
 	Fahrenheit 451 - Frankenstein - Ubik
 	^^^
 	---
-	   !__!
-	   ~~~
-	  (@)(-)
-	  ~~~
-	 \\.'||'./
-	 ~~~
-	-:  ::  :-
-	~~~
-	/'..''..'\\
-	~~~ 
-		
+	𓆦	
 
-	... `,
+	`,
 		// Current day LLM related
 	'AMI.txt' : `BrundleCorp™ Internal Database Document:	+3-18Ufor
 	Version 18.1.17
@@ -114,6 +107,7 @@ const FILES = {
 	^^^
 	---
 	Competition Report: 
+	
 	
 
 	---
