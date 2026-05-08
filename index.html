@@ -36,7 +36,16 @@
 					else if(cmd === 'open'){
 						if(FILES[args[0]]){
 							const lines = FILES[args[0]].split('---');
-							for(const chunk of lines){
+							const isAAIS = args[0] === 'AAIS.txt';
+							const a1 = document.getElementById('audio1');
+							const a2 = document.getElementById('audio2');
+							if(isAAIS){
+								a1.volume = 1; a2.volume = 0;
+								a1.currentTime = 0; a2.currentTime = 0;
+								a1.play(); a2.play();
+							}
+							for(let i = 0; i < lines.length; i++){
+								const chunk = lines[i];
 								for(const subLine of chunk.split('\n')){
 									outputSpeed = Math.floor(Math.random()*50)
 									if (subLine.length === 0){
@@ -46,12 +55,17 @@
 										await this.echo(subLine,{typing: true, delay: outputSpeed});
 									}
 								}
+								if(isAAIS && lines.length > 1){
+									const p = i / (lines.length - 1);
+									a1.volume = 1 - p;
+									a2.volume = p;
+								}
 								 this.pause();
 								 await new Promise(resolve => $(document).one('keydown', resolve));
-								 // remove keystoke here ## TODO
+								 this.set_command('');
 								 this.resume();
 							}
-							
+							if(isAAIS){ a1.pause(); a2.pause(); }
 						}
 						else {
 							this.error(`open error: provide valid file`);
@@ -83,5 +97,7 @@
 </script>
 </head>
 <body>
+<audio id="audio1" src="audio1.mp3" loop preload="auto"></audio>
+<audio id="audio2" src="audio2.mp3" loop preload="auto"></audio>
 </body>
 </html>
