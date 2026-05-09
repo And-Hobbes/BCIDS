@@ -26,7 +26,20 @@
 					const parts = command.split(' ');
 					const cmd = parts[0];
 					const args = parts.slice(1);
-					
+
+					const showHome = async (consumed) => {
+						await new Promise(r => setTimeout(r, 3000));
+						this.clear();
+						this.set_command('');
+						this.echo(introart);
+						this.echo("\n Property of BrundleCorp Internal Database Systems Department \n");
+						this.echo(Object.keys(FILES).map(f =>
+							f === consumed
+								? `[[s;#666;]${f}]`
+								: `[[;green;]${f}]`
+						).join('\n'));
+					};
+
 					if(cmd === 'exit'){
 						window.close()
 					}
@@ -35,7 +48,7 @@
 					}
 					else if(cmd === 'open'){
 						const isWEOROLD = args[0] === 'WEOROLD.txt';
-						const WEOROLD_INTERVAL = 3500; 
+						const WEOROLD_INTERVAL = 4000; 
 
 						if(!isWEOROLD){
 							this.echo('[press any key after sentence is written to continue]');
@@ -43,6 +56,7 @@
 							await new Promise(resolve => $(document).one('keydown', resolve));
 							this.set_command('');
 							this.resume();
+							this.clear();
 						}
 
 						if(FILES[args[0]]){
@@ -64,6 +78,7 @@
 								await new Promise(r => $(document).one('keydown', r));
 								this.set_command('');
 								this.resume();
+
 							};
 							for(let i = 0; i < lines.length; i++){
 								const chunk = lines[i];
@@ -113,8 +128,8 @@
 								}
 								if(isAAIS && lines.length > 1){
 									const p = i / (lines.length - 1);
-									const fadeStart = 0.4;
-									const fadeEnd   = 0.6;
+									const fadeStart = 0.2;
+									const fadeEnd   = 0.5;
 									const fade = Math.min(1, Math.max(0, (p - fadeStart) / (fadeEnd - fadeStart)));
 									a1.volume = Math.cos(fade * Math.PI / 2);
 									a2.volume = Math.sin(fade * Math.PI / 2);
@@ -130,6 +145,7 @@
 						else {
 							this.error(`open error: provide valid file`);
 						}
+					await showHome(args[0]);
 					}
 					else if(cmd === 'boot'){
 						this.clear();

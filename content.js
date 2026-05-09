@@ -221,7 +221,7 @@ const FILES = {
 	---
 	Project - WEOROLD-████████████® 
 	---
-	The WEOROLD-████████████®, hereby refered to as the ███, is the first of its kind. A neural interface able to completely abstract any unnecessary input, supplying the recipient with a perfectly tailed existence. 
+	The WEOROLD-████████████®, hereby refered to as the ███, is the first of its kind. A neural interface able to completely abstract any unnecessary input, supplying the recipient with a perfectly tailored existence. 
 	---
 	Competition Report: 
 
