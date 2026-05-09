@@ -34,12 +34,16 @@
 						window.location.reload();
 					}
 					else if(cmd === 'open'){
-						
-						this.echo('[press any key after sentence is written to continue]');
-						this.pause();
-						await new Promise(resolve => $(document).one('keydown', resolve));
-						this.set_command('');
-						this.resume();
+						const isWEOROLD = args[0] === 'WEOROLD.txt';
+						const WEOROLD_INTERVAL = 3500; // ms between chunks for WEOROLD auto-advance
+
+						if(!isWEOROLD){
+							this.echo('[press any key after sentence is written to continue]');
+							this.pause();
+							await new Promise(resolve => $(document).one('keydown', resolve));
+							this.set_command('');
+							this.resume();
+						}
 
 						if(FILES[args[0]]){
 							const lines = FILES[args[0]].split('---');
@@ -138,7 +142,11 @@
 									a1.volume = Math.cos(fade * Math.PI / 2);
 									a2.volume = Math.sin(fade * Math.PI / 2);
 								}
-								await waitForKey();
+								if(isWEOROLD){
+									await new Promise(r => setTimeout(r, WEOROLD_INTERVAL));
+								} else {
+									await waitForKey();
+								}
 							}
 							if(isAAIS){ a1.pause(); a2.pause(); }
 						}
