@@ -35,7 +35,7 @@
 					}
 					else if(cmd === 'open'){
 						const isWEOROLD = args[0] === 'WEOROLD.txt';
-						const WEOROLD_INTERVAL = 3500; // ms between chunks for WEOROLD auto-advance
+						const WEOROLD_INTERVAL = 3500; 
 
 						if(!isWEOROLD){
 							this.echo('[press any key after sentence is written to continue]');
@@ -56,7 +56,6 @@
 								a1.currentTime = 0; a2.currentTime = 0;
 								a1.play(); a2.play();
 							}
-							// a line containing just ^^^ toggles highlight mode
 							let highlight = false;
 							const HIGHLIGHT_COLOR = '#ff5555'; // change to recolor
 							const wrap = (s, hi) => hi ? `[[;${HIGHLIGHT_COLOR};]${s}]` : s;
@@ -69,19 +68,6 @@
 							for(let i = 0; i < lines.length; i++){
 								const chunk = lines[i];
 
-								// --- CVTS-only behaviour --------------------------------------
-								// Within a single '---' chunk, show ONE line at a time.
-								// Each keystroke types the next line. Variant lines erase
-								// (reverse-typed) before the next types in; sticky lines persist.
-								//
-								// Markers (per chunk):
-								//   '~~~'  splits sticky header (above) from variants (below).
-								//          If absent, all lines are treated as variants.
-								//   '^^^'  toggles highlight (works in either section).
-								//
-								// Sticky lines: type, wait, advance — never erase.
-								// Variant lines: type, wait, erase (unless it's the last variant,
-								//                which stays on screen as the "chosen" version).
 								if(isCVTS){
 									const items = [];
 									let inVariants = false;
@@ -91,18 +77,14 @@
 										if(s.trim().length === 0) continue;
 										items.push({text: s, hi: highlight, variant: inVariants});
 									}
-									// no '~~~' in this chunk → preserve old behaviour: all variants
 									if(!items.some(it => it.variant)){
 										for(const it of items) it.variant = true;
 									}
 									for(let j = 0; j < items.length; j++){
 										const {text, hi, variant} = items[j];
 										const speed = Math.floor(Math.random()*30);
-										// type the line in
 										await this.echo(wrap(text, hi), {typing: true, delay: speed});
-										// wait for the user to press a key
 										await waitForKey();
-										// erase only if this is a variant AND another variant follows
 										const next = items[j + 1];
 										if(variant && next && next.variant){
 											const idx = this.last_index();
@@ -113,9 +95,8 @@
 											this.remove_line(idx);
 										}
 									}
-									continue; // next chunk
+									continue; 
 								}
-								// --- end CVTS branch ------------------------------------------
 
 								for(const subLine of chunk.split('\n')){
 									if(subLine.trim() === '^^^'){
@@ -131,14 +112,10 @@
 									}
 								}
 								if(isAAIS && lines.length > 1){
-									// progress through the file: 0 at the first chunk, 1 at the last
 									const p = i / (lines.length - 1);
-									// crossfade only happens between fadeStart and fadeEnd.
-									// before fadeStart: audio1 alone. after fadeEnd: audio2 alone.
 									const fadeStart = 0.4;
 									const fadeEnd   = 0.6;
 									const fade = Math.min(1, Math.max(0, (p - fadeStart) / (fadeEnd - fadeStart)));
-									// equal-power curve: keeps combined loudness roughly flat through the fade
 									a1.volume = Math.cos(fade * Math.PI / 2);
 									a2.volume = Math.sin(fade * Math.PI / 2);
 								}
