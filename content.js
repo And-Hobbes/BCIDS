@@ -1,6 +1,6 @@
 const FILES = {
 	'AAIS.txt' : `BrundleCorp™ Internal Database Document:  e-7100
-	Version 1.4.2 - William Michael Kahlhamer
+	Version 1.4.2 - Gregor S. 
 
 	Project - AuditaryAugmentationIntegrationSystem®
 	---
@@ -47,9 +47,9 @@ const FILES = {
 		//
 	'CVTS.txt' : `BrundleCorp™ Internal Database Document:	b12-ce19
 	~~~
-	Version 8.7.14 - William Michael Kahlhamer
-	Version 8.7 - Bill M. Kahlhamer
-	Version 8 - B.M.K
+	Version 8.7.14 - Ronald James MacReady
+	Version 8.7 - R. J. MacReady
+	Version 8 - Mac
 	---
 
 	Project - ContextualVisualandTextualSimplifier® 
@@ -78,8 +78,8 @@ const FILES = {
 	CVTS can be sold as a "second brain" tool much like the ancient large language models systems of the past. The promise of increased productivity and clearer understanding of the world will attract users and capital alike. The CVTS can be sold in a bundle with our highly successful AAIS system to further augment perspective modifying system deals.
 	CVTS should sell the promise of better productivity with more enjoyment. Product is highly desirable to workers and corporations for its benefits. Product fits well in our existing product lineup.
 	Product detaches the worker from the work, sell to the worker the idea of constant vacation, and to the company driven, high quality, perfect workers.
-
-
+	
+	---
 	Celebrity Endorsement:
 	~~~
 	---
@@ -96,7 +96,7 @@ const FILES = {
 	`,
 		// Current day LLM related
 	'AMI.txt' : `BrundleCorp™ Internal Database Document:	+3-18Ufor
-	Version 18.1.17
+	Version 18.1.17 - Leroy B.
 
 	Project - ArtificialMnemonicIntegrator® 
 	---
@@ -107,29 +107,39 @@ const FILES = {
 	^^^
 	---
 	Competition Report: 
-	Even more reminiscent of the long obsolete large language model or at the time incorrectly referred to as
+	Even more reminiscent of the long obsolete large language models or as they were incorrectly referred to at the time
 	^^^
-	|Artificially Intelligent|
+	|Artificial Intelligence|
 	^^^
 	This incorrect label is clear when refered to the NEXUS line developped by the Rosen Association™. Currently there exists no competitor in the field of generative intelligence adaptive learning.
 	^^^
-	LLM replace this line with a large paragraph, starting somewhat related to the sentence above as if to explain, but quickly devolve into recursive metaphors making the explaination indecipherable, or at the very least very obtuse. 
+	LLM replace this line with a large paragraph, starting somewhat related to the sentence above as if to explain, 
+	but quickly devolve into recursive metaphors making the explaination indecipherable, or at the very least very obtuse. 
 	^^^
 
 	---
 	Product RoadMap:
-	The AMI, as tested in the Antarctic American Research Station in a joint effort with the Alva Enterprise™, succeeded in developping heterotopia with simulated personal connection by mergering the knowledge base of LLM's with the nexus-6 personality framework.
+	The AMI®, as developed with the Rosen Association™, and as tested in the Antarctic American Research Station in a joint effort with the Alva Enterprise™. 
+	Has succeeded in developping a heterotopia with simulated personal connection by mergering the knowledge base of LLM's with the nexus-6 personality framework.
 	This remedies the earlier failures of the CVTS, which, after extended use caused recipients to develop.
 	^^^
 	Schizophrenia
 	Solipsism
 	Delusions of Godhood
-	
-	LLM replace this line with a large paragraph, starting somewhat related to the sentence above as if to explain, but quickly devolve into recursive metaphors making the explaination indecipherable, or at the very least very obtuse. Furthermore, for this one include some identity signaling language, such as I and you as if you were a person and the reader was the recipient of the AMI and you are the LLM-Nexus Hybrid.
+	^^^
+ 	One test subject, after deactivating the system, could not return to reality properly refusing to eat or drink. Only repeating the phrase 
+	"I've seen things... seen things you little people wouldn't believe. Attack ships on fire off the shoulder of Orion bright as magnesium... 
+	I rode on the back decks of a blinker and watched C-beams glitter in the dark near the Tannhäuser Gate. All those moments..." until he eventually succumbed to death. 
+	^^^
+	LLM replace this line with a large paragraph, starting somewhat related to the sentence above as if to explain, 
+	but quickly devolve into recursive metaphors making the explaination indecipherable, or at the very least very obtuse. 
+	Furthermore, for this one include some identity signaling language, 
+	such as I and you as if you were a person and the reader was the recipient of the AMI® and you are the LLM-Nexus Hybrid.
 	^^^
 	*Current long term affects of the AMI are unknown but the addition of personality is 99% likely to remove any chance of the earlier failures*
 	---
 	Marketing and Implementation Strategy:
+	The AMI® will, inevitably, be subject to scrutiny for the failures of its predecessor | the CVTS | however, given the lack of competition, and societal crave for escape from the scortched earth, this will likely not prove to be an issue for long.
 
 	Celebrity Endorsement:
 	---
@@ -146,21 +156,36 @@ const FILES = {
 
 	...`,
 		// Neuromancer/Matrix Connection
-		'OpusPromethean.txt' : `BrundleCorp™ Internal Database Document: ██ ██ ██ ██ -4	
-	Version 1.1.██ █ 
-
-	Project - Opus Prometheam® 
-		
+		'WEOROLD.txt' : `BrundleCorp™ Internal Database Document: █████████	
+	Version ██.██.██ - V.F
 	---
-	Competition Report:
+	^^^
+	Interal Codename - Modernity's Prometheus
+	^^^
+	---
+	Project - WEOROLD-████████████® 
+	---
+	The WEOROLD-████████████®, hereby refered to as the weo, is the first of its kind. A neural interface able to completely abstract any unnecessary input, supplying the recipient with a perfectly tailed existence. 
+	---
+	Competition Report: 
+
+	Given the first of its kind nature, the weo serves it own unique market. 
+	The closest available product is the Ono-Sendai Cyberspace VII® by the Ono-Sendai corporation™.
+	However the aforementioned competitor is targeted at NetRunners with existing input jacks meant for augmentation of ability, not the detachment from reality with augmented existence space.
 
 	---
 	Product RoadMap:
 	
 	---
 	Marketing and Implementation Strategy:
-
+	
+	---
 	Celebrity Endorsement:
+	
+	^^^
+	Unnecessary
+	^^^
+	
 	---
 
 	---
